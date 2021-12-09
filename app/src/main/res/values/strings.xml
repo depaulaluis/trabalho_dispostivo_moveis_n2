@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Converter</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_saiba_mais">SaibaMais</string>
+    <string name="title_activity_curiosidades">Curiosidades</string>
+
+    <string name="menuSaibaMais"> Saiba Mais</string>
+    <string name="menuCuriosidades"> Curiosidades</string>
+
+    <string name="txtConversor">Conversor de moedas</string>
+    <string name="valor">Digite o valor para converter:</string>
+    <string name="De">De</string>
+    <string name="Para">Para</string>
+    <string name="btn1">CONVERTER</string>
+    <string name="tvCuriosidades">5 CURIOSIDADES</string>
+    <string name="textView">1. O primeiro nome da produção, em inglês, foi Round 6. Mudou-se para Squid Game. Curiosamente, no Brasil foi mantida a versão inicial.</string>
+    <string name="textView8">2. Hwang Dong-hyuk, o diretor criador da série, começou a trabalhar no roteiro em 2008. Mas achou muito distópico e violento e que ninguém embarcaria no projeto. Hoje o mundo se tornou distópico e violento o suficiente para consumir vorazmente Round 6.</string>
+    <string name="textView9">3. A boneca gigante do primeiro episódio não foi feita para a série. Ela fica na entrada de um museu de carruagens em Jincheon, três horas ao norte de Seul. Virou meme global.</string>
+    <string name="textView10">4. O número de telefone que aparece num cartão de visita convidando o personagem principal a participar dos jogos existe realmente. A dona da linha disse ter recebido até 4 mil ligações num dia, segundo o site Business Insider.</string>
+    <string name="textView11">5. Foi a primeira atuação de Jung Ho-yeon, a protagonista feminina da série. Ela iniciou a carreira como modelo e já foi capa da revista Vogue. </string>
+    <string name="tvSaiba">Saiba mais sobre Round 6</string>
+    <string name="textView2">Prêmio do Jogo: R$ 208.845.119,58</string>
+    <string name="textView3">Dívida do Sang-Woo: R$ 27.479.621,00</string>
+    <string name="textView4">Dívida do Seong Gi-hun: R$ 732.789,89 </string>
+    <string name="textView7">Um tapa na cara: R$ 457,99 </string>
+    <string name="textView5">Parte por jogador: R$ 457.9993,68</string>
+    <string name="textView6">Prêmio da corrida de cavalos: R$ 20.609,72</string>
+
+
+
+
+</resources>

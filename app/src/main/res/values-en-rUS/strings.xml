@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Converter</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_saiba_mais">SaibaMais</string>
+    <string name="title_activity_curiosidades">Curiosidades</string>
+
+    <string name="menuSaibaMais"> Know more</string>
+    <string name="menuCuriosidades">Curiosities</string>
+
+
+    <string name="txtConversor">Currency converter</string>
+    <string name="valor">Enter the value to convert:</string>
+    <string name="De">To</string>
+    <string name="Para">For</string>
+    <string name="btn1">CONVERT</string>
+    <string name="tvCuriosidades">5 CURIOSITIES</string>
+    <string name="textView">1. The first name of the production, in English, was Round 6. Changed to Squid Game. Interestingly, in Brazil the initial version was kept.</string>
+    <string name="textView8">2. Hwang Dong-hyuk, the series creative director, started working on the script in 2008. But he found it too dystopian and violent and that no one would embark on the project. Today the world has become dystopian and violent enough to voraciously consume Round 6.</string>
+    <string name="textView9">3. The giant doll from the first episode was not made for the series. It stands at the entrance to a carriage museum in Jincheon, three hours north of Seoul. It became a global meme.</string>
+    <string name="textView10">4. The phone number that appears on a business card inviting the main character to participate in the games actually exists. The line s owner said she received up to 4,000 calls in one day, according to the Business Insider website.</string>
+    <string name="textView11">5. It was the first performance of Jung Ho-yeon, the female protagonist of the series. She started her career as a model and has been on the cover of Vogue magazine.</string>
+    <string name="tvSaiba">Learn more about Round 6</string>
+    <string name="textView2">Game Prize: BRL 208.845,119.58</string>
+    <string name="textView3">Sang-Woo debt: BRL 27,479,621.00</string>
+    <string name="textView4">Debt of Seong Gi-hun: BRL 732,789.89</string>
+    <string name="textView7">A slap in the face: BRL 457.99</string>
+    <string name="textView5">Part per player: BRL 457,9993.68</string>
+    <string name="textView6">Horse racing prize: BRL 20,609.72</string>
+</resources>
