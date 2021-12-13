@@ -32,6 +32,7 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.lang.reflect.Array;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
@@ -54,12 +55,13 @@ public class MainActivity extends AppCompatActivity {
         b1 = findViewById(R.id.btn1);
         ed1 = findViewById(R.id.txtuname);
 
-        String[] from = {"WONS"};
+        String[] from = {"WONS","Real","Dolar","Libra","Peso Argentino","Euro"};
+        Double[] values = {0.0047, 0.00085, 0.00064, 0.086, 0.00075};
         ArrayAdapter ad = new ArrayAdapter<String>(this,R.layout.support_simple_spinner_dropdown_item,from);
         sp1.setAdapter(ad);
 
 
-        String[] to = {"Real","Dolar","Libra","Peso Argentino","Euro"};
+        String[] to = {"WONS","Real","Dolar","Libra","Peso Argentino","Euro"};
         ArrayAdapter ad1 = new ArrayAdapter<String>(this,R.layout.support_simple_spinner_dropdown_item,to);
         sp2.setAdapter(ad1);
 
@@ -73,10 +75,26 @@ public class MainActivity extends AppCompatActivity {
                 Double wons;
 
                 Double wonsConvertido = Double.parseDouble(ed1.getText().toString());
+                String valueFrom = sp1.getSelectedItem().toString();
+                String toFrom = sp2.getSelectedItem().toString();
+                Double multiplicadorFrom=0.0;
+                Double multiplicadorTo=0.0;
 
-                if(sp1.getSelectedItem().toString() == "WONS" && sp2.getSelectedItem().toString() == "Real")
+
+                for(int i = 0; i < from.length; i++){
+                    if(from[i]==valueFrom){
+                        multiplicadorFrom = values[i];
+                    }
+                    if(to[i] == toFrom){
+                        multiplicadorTo = values[i];
+                    }
+                }
+                wons  = wonsConvertido * multiplicadorTo;
+
+
+               /* //if(sp1.getSelectedItem().toString() == "WONS" && sp2.getSelectedItem().toString() == "Real")
                 {
-                    wons = wonsConvertido * 0.0047;
+                    valueFrom = wonsConvertido * 0.0047;
                     Toast.makeText(getApplicationContext(),String.format("%.2f",wons),Toast.LENGTH_LONG).show();
                 }
                 else if(sp1.getSelectedItem().toString() == "WONS" && sp2.getSelectedItem().toString() == "Dolar")
@@ -99,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
                 {
                     wons = wonsConvertido * 0.00075;
                     Toast.makeText(getApplicationContext(),String.format("%.2f",wons),Toast.LENGTH_LONG).show();
-                }
+                }*/
             }
         });
     }
