@@ -56,7 +56,6 @@ public class MainActivity extends AppCompatActivity {
         ed1 = findViewById(R.id.txtuname);
 
         String[] from = {"WONS","Real","Dolar","Libra","Peso Argentino","Euro"};
-        Double[] values = {0.0047, 0.00085, 0.00064, 0.086, 0.00075};
         ArrayAdapter ad = new ArrayAdapter<String>(this,R.layout.support_simple_spinner_dropdown_item,from);
         sp1.setAdapter(ad);
 
@@ -73,28 +72,22 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 Double wons;
+                Double real;
+                Double dolar;
+                Double libra;
+                Double pesoAgentino;
+                Double euro;
 
                 Double wonsConvertido = Double.parseDouble(ed1.getText().toString());
-                String valueFrom = sp1.getSelectedItem().toString();
-                String toFrom = sp2.getSelectedItem().toString();
-                Double multiplicadorFrom=0.0;
-                Double multiplicadorTo=0.0;
+                Double realConvertido = Double.parseDouble(ed1.getText().toString());
+                Double dolarConvertido = Double.parseDouble(ed1.getText().toString());
+                Double libraConvertido = Double.parseDouble(ed1.getText().toString());
+                Double pesoArgentinoConvertido = Double.parseDouble(ed1.getText().toString());
+                Double euroConvertido = Double.parseDouble(ed1.getText().toString());
 
-
-                for(int i = 0; i < from.length; i++){
-                    if(from[i]==valueFrom){
-                        multiplicadorFrom = values[i];
-                    }
-                    if(to[i] == toFrom){
-                        multiplicadorTo = values[i];
-                    }
-                }
-                wons  = wonsConvertido * multiplicadorTo;
-
-
-               /* //if(sp1.getSelectedItem().toString() == "WONS" && sp2.getSelectedItem().toString() == "Real")
+                if(sp1.getSelectedItem().toString() == "WONS" && sp2.getSelectedItem().toString() == "Real")
                 {
-                    valueFrom = wonsConvertido * 0.0047;
+                    wons = wonsConvertido * 0.0047;
                     Toast.makeText(getApplicationContext(),String.format("%.2f",wons),Toast.LENGTH_LONG).show();
                 }
                 else if(sp1.getSelectedItem().toString() == "WONS" && sp2.getSelectedItem().toString() == "Dolar")
@@ -117,7 +110,148 @@ public class MainActivity extends AppCompatActivity {
                 {
                     wons = wonsConvertido * 0.00075;
                     Toast.makeText(getApplicationContext(),String.format("%.2f",wons),Toast.LENGTH_LONG).show();
-                }*/
+                }
+
+
+
+                if(sp1.getSelectedItem().toString() == "Real" && sp2.getSelectedItem().toString() == "WONS")
+                {
+                    real = realConvertido * 209.10;
+                    Toast.makeText(getApplicationContext(),String.format("%.2f",real),Toast.LENGTH_LONG).show();
+                }
+                else if(sp1.getSelectedItem().toString() == "Real" && sp2.getSelectedItem().toString() == "Dolar")
+                {
+                    real = realConvertido * 0.18;
+                    Toast.makeText(getApplicationContext(),String.format("%.2f",real),Toast.LENGTH_LONG).show();
+                }
+                else if(sp1.getSelectedItem().toString() == "Real" && sp2.getSelectedItem().toString() == "Libra")
+                {
+                    real = realConvertido * 0.13;
+                    Toast.makeText(getApplicationContext(),String.format("%.2f",real),Toast.LENGTH_LONG).show();
+
+                }
+                else if(sp1.getSelectedItem().toString() == "Real" && sp2.getSelectedItem().toString() == "Peso Argentino")
+                {
+                    real = realConvertido * 17.95;
+                    Toast.makeText(getApplicationContext(),String.format("%.2f",real),Toast.LENGTH_LONG).show();
+                }
+                else if(sp1.getSelectedItem().toString() == "Real" && sp2.getSelectedItem().toString() == "Euro")
+                {
+                    real = realConvertido * 0.16;
+                    Toast.makeText(getApplicationContext(),String.format("%.2f",real),Toast.LENGTH_LONG).show();
+                }
+
+
+                if(sp1.getSelectedItem().toString() == "Dolar" && sp2.getSelectedItem().toString() == "WONS")
+                {
+                    dolar = dolarConvertido * 1184.80;
+                    Toast.makeText(getApplicationContext(),String.format("%.2f",dolar),Toast.LENGTH_LONG).show();
+                }
+                else if(sp1.getSelectedItem().toString() == "Dolar" && sp2.getSelectedItem().toString() == "Real")
+                {
+                    dolar = dolarConvertido * 5.67;
+                    Toast.makeText(getApplicationContext(),String.format("%.2f",dolar),Toast.LENGTH_LONG).show();
+                }
+                else if(sp1.getSelectedItem().toString() == "Dolar" && sp2.getSelectedItem().toString() == "Libra")
+                {
+                    dolar = dolarConvertido * 0.76;
+                    Toast.makeText(getApplicationContext(),String.format("%.2f",dolar),Toast.LENGTH_LONG).show();
+
+                }
+                else if(sp1.getSelectedItem().toString() == "Dolar" && sp2.getSelectedItem().toString() == "Peso Argentino")
+                {
+                    dolar = dolarConvertido * 101.70;
+                    Toast.makeText(getApplicationContext(),String.format("%.2f",dolar),Toast.LENGTH_LONG).show();
+                }
+                else if(sp1.getSelectedItem().toString() == "Dolar" && sp2.getSelectedItem().toString() == "Euro")
+                {
+                    dolar = dolarConvertido * 0.89;
+                    Toast.makeText(getApplicationContext(),String.format("%.2f",dolar),Toast.LENGTH_LONG).show();
+                }
+
+
+                if(sp1.getSelectedItem().toString() == "Libra" && sp2.getSelectedItem().toString() == "WONS")
+                {
+                    libra = libraConvertido * 1565.26;
+                    Toast.makeText(getApplicationContext(),String.format("%.2f",libra),Toast.LENGTH_LONG).show();
+                }
+                else if(sp1.getSelectedItem().toString() == "Libra" && sp2.getSelectedItem().toString() == "Real")
+                {
+                    libra = libraConvertido * 7.48;
+                    Toast.makeText(getApplicationContext(),String.format("%.2f",libra),Toast.LENGTH_LONG).show();
+                }
+                else if(sp1.getSelectedItem().toString() == "Libra" && sp2.getSelectedItem().toString() == "Dolar")
+                {
+                    libra = libraConvertido * 1.32;
+                    Toast.makeText(getApplicationContext(),String.format("%.2f",libra),Toast.LENGTH_LONG).show();
+
+                }
+                else if(sp1.getSelectedItem().toString() == "Libra" && sp2.getSelectedItem().toString() == "Peso Argentino")
+                {
+                    libra = libraConvertido * 134.39;
+                    Toast.makeText(getApplicationContext(),String.format("%.2f",libra),Toast.LENGTH_LONG).show();
+                }
+                else if(sp1.getSelectedItem().toString() == "Libra" && sp2.getSelectedItem().toString() == "Euro")
+                {
+                    libra = libraConvertido * 1.17;
+                    Toast.makeText(getApplicationContext(),String.format("%.2f",libra),Toast.LENGTH_LONG).show();
+                }
+
+
+                if(sp1.getSelectedItem().toString() == "Peso Argentino" && sp2.getSelectedItem().toString() == "WONS")
+                {
+                    pesoAgentino = pesoArgentinoConvertido * 11.65;
+                    Toast.makeText(getApplicationContext(),String.format("%.2f",pesoAgentino),Toast.LENGTH_LONG).show();
+                }
+                else if(sp1.getSelectedItem().toString() == "Peso Argentino" && sp2.getSelectedItem().toString() == "Real")
+                {
+                    pesoAgentino = pesoArgentinoConvertido * 0.056;
+                    Toast.makeText(getApplicationContext(),String.format("%.2f",pesoAgentino),Toast.LENGTH_LONG).show();
+                }
+                else if(sp1.getSelectedItem().toString() == "Peso Argentino" && sp2.getSelectedItem().toString() == "Dolar")
+                {
+                    pesoAgentino = pesoArgentinoConvertido * 0.0098;
+                    Toast.makeText(getApplicationContext(),String.format("%.2f",pesoAgentino),Toast.LENGTH_LONG).show();
+
+                }
+                else if(sp1.getSelectedItem().toString() == "Peso Argentino" && sp2.getSelectedItem().toString() == "Libra")
+                {
+                    pesoAgentino = pesoArgentinoConvertido * 0.0074;
+                    Toast.makeText(getApplicationContext(),String.format("%.2f",pesoAgentino),Toast.LENGTH_LONG).show();
+                }
+                else if(sp1.getSelectedItem().toString() == "Peso Argentino" && sp2.getSelectedItem().toString() == "Euro")
+                {
+                    pesoAgentino = pesoArgentinoConvertido * 0.0087;
+                    Toast.makeText(getApplicationContext(),String.format("%.2f",pesoAgentino),Toast.LENGTH_LONG).show();
+                }
+
+                if(sp1.getSelectedItem().toString() == "Euro" && sp2.getSelectedItem().toString() == "WONS")
+                {
+                    euro = euroConvertido * 1338.70;
+                    Toast.makeText(getApplicationContext(),String.format("%.2f",euro),Toast.LENGTH_LONG).show();
+                }
+                else if(sp1.getSelectedItem().toString() == "Euro" && sp2.getSelectedItem().toString() == "Real")
+                {
+                    euro = euroConvertido * 6.40;
+                    Toast.makeText(getApplicationContext(),String.format("%.2f",euro),Toast.LENGTH_LONG).show();
+                }
+                else if(sp1.getSelectedItem().toString() == "Euro" && sp2.getSelectedItem().toString() == "Dolar")
+                {
+                    euro = euroConvertido * 1.13;
+                    Toast.makeText(getApplicationContext(),String.format("%.2f",euro),Toast.LENGTH_LONG).show();
+
+                }
+                else if(sp1.getSelectedItem().toString() == "Euro" && sp2.getSelectedItem().toString() == "Libra")
+                {
+                    euro = euroConvertido * 0.85;
+                    Toast.makeText(getApplicationContext(),String.format("%.2f",euro),Toast.LENGTH_LONG).show();
+                }
+                else if(sp1.getSelectedItem().toString() == "Euro" && sp2.getSelectedItem().toString() == "Peso Argentino")
+                {
+                    euro = euroConvertido * 114.92;
+                    Toast.makeText(getApplicationContext(),String.format("%.2f",euro),Toast.LENGTH_LONG).show();
+                }
+
             }
         });
     }
